@@ -13,5 +13,7 @@ def parse():
     for data in block:
         if data.find('li'):
             description = data.text
+    descriprion = description.split('\n')
+    description = [line.strip() for line in descriprion if line.strip()]
 
     return (description)
